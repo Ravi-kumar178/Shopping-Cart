@@ -15,7 +15,7 @@ export const Home = () => {
         try{
 
             const res = await fetch(API_KEY);
-            const data = res.json();
+            const data = await res.json();
             console.log(data);
             setItems(data);
 
@@ -33,7 +33,7 @@ export const Home = () => {
     },[]);
 
   return (
-    <div>
+    <div className='max-w-6xl mx-auto'>
         <div>
             {
                 loading?
@@ -42,14 +42,14 @@ export const Home = () => {
                 </div>)
                 :
                 (
-                    <div>
+                    <div className='w-full h-full mx-auto'>
                         {
                             items.length > 0 ? 
                             (
-                             <div>
+                             <div className='w-full h-full py-8 pt-24 mx-auto grid grid-cols-4 gap-14'>
                                 {
                                     items.map((item)=>(
-                                        <ProductItem/>
+                                        <ProductItem key={item.id} item={item}/>
                                     ))
                                 }
                              </div>   

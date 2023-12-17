@@ -1,8 +1,12 @@
 import React from 'react'
 import { FaShoppingCart } from "react-icons/fa";
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
+
+  const {cart} = useSelector((state)=>state);
+
   return (
     <div className='w-full bg-slate-900 py-3'>
         <div className='max-w-6xl  mx-auto flex justify-between items-center'>
@@ -19,8 +23,9 @@ export const Navbar = () => {
                 </Link>
                 
                 <Link to={"/cart"}>
-                  <div>
+                  <div className='relative '>
                     <FaShoppingCart size={24}/>
+                    <span className='absolute -top-4 -right-1 animate-bounce font-semibold bg-green-600 w-[15px] text-center rounded-full text-xs'>{cart.length}</span>
                   </div>
                 </Link>
             </div>
