@@ -40,7 +40,7 @@ export const ProductItem = ({item}) => {
            <p className='text-green-600 font-bold'>${item.price}</p>
            <div>
              {
-              cart.some((i)=>(i.id == item.id)) ?
+              cart.some((i)=>(i.id === item.id)) ?
                (
                 <button onClick={removeFromCart}
                 className='text-gray-700 font-semibold text-sm border-2 border-gray-700 rounded-full px-3 py-[2px] hover:bg-gray-700 hover:text-slate-100 transition-all duration-300 ease-in-out'

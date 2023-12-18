@@ -8,8 +8,8 @@ export const Navbar = () => {
   const {cart} = useSelector((state)=>state);
 
   return (
-    <div className='w-full bg-slate-900 py-3'>
-        <div className='max-w-6xl  mx-auto flex justify-between items-center'>
+    <div className=' w-full bg-slate-900 py-3'>
+        <div className='max-w-7xl   mx-auto flex justify-between items-center'>
             
             <Link to={"/"}>
                 <div className='ml-3'>

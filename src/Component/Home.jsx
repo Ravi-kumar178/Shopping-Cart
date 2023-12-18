@@ -46,7 +46,7 @@ export const Home = () => {
                         {
                             items.length > 0 ? 
                             (
-                             <div className='w-full h-full py-8 pt-24 mx-auto grid grid-cols-4 gap-14'>
+                             <div className='w-full h-full py-8 pt-24 mx-auto grid  lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-14'>
                                 {
                                     items.map((item)=>(
                                         <ProductItem key={item.id} item={item}/>

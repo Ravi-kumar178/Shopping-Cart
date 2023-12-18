@@ -14,7 +14,7 @@ export const CartItem = ({item}) => {
     }
 
   return (
-    <div className='w-[60%] border-b-2 pb-20 border-gray-700'>
+    <div className='md:w-[60%] sm:w-[75%] w-full border-b-2 pb-20 border-gray-700'>
         <div className='w-full flex flex-col justify-evenly gap-5 items-center'>
             <div className='w-[150px]'>
                 <img src={item.image} alt='' loading='lazy'/>

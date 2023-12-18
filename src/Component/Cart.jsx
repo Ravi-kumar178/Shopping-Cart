@@ -19,7 +19,7 @@ export const Cart = () => {
        {
         cart.length > 0 ? 
         (
-          <div className='w-full px-10 flex '>
+          <div className='w-full px-10 sm:flex '>
 
             <div className='w-full grid grid-cols-1 gap-10'>
               {
@@ -29,7 +29,7 @@ export const Cart = () => {
               }
             </div>
 
-            <div className=" -translate-x-56">
+            <div className=" lg:-translate-x-56 md:-translate-x-40 sm:-translate-x-32 xs:-translate-x-20">
 
               <div className=' flex flex-col items-between gap-1'>
                 <p className='text-gray-700 text-xl font-bold tracking-wide'>Your Cart</p>
@@ -48,11 +48,11 @@ export const Cart = () => {
         )
          : 
         (
-         <div>
-            <p>Cart is Empty!!!</p>
+         <div className='w-full flex flex-col gap-4 justify-center items-center'>
+            <p className='text-gray-700 font-bold text-xl '>Cart is Empty!!!</p>
 
             <Link to={"/"}>
-               <button>Shop Now</button>
+               <button className='text-gray-700 font-semibold text-sm border-2 border-gray-700 rounded-full px-3 py-[2px] hover:bg-gray-700 hover:text-slate-100 transition-all duration-300 ease-in-out'>Shop Now</button>
             </Link>
          </div>
          )

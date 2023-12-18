@@ -6,7 +6,7 @@ import { Cart } from "./Component/Cart";
 
 function App() {
   return (
-   <div className="w-full h-full">
+   <div className="w-full h-full overflow-x-hidden">
       <div className="w-full h-full">
         <Navbar/>
         <div>
