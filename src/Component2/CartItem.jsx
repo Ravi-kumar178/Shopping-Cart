@@ -19,7 +19,7 @@ export const CartItem = ({item}) => {
             <div className='w-[150px]'>
                 <img src={item.image} alt='' loading='lazy'/>
             </div>
-            <div className='w-[60%] flex flex-col gap-2 justify-center '>
+            <div className='lg:w-[60%] md:w-[70%] flex flex-col gap-2 justify-center '>
                 <p className='text-xl tracking-wide font-medium text-gray-700'>{item.title}</p>
                 <p className='text-sm text-gray-400 tracking-wider '>{item.description}</p>
 
