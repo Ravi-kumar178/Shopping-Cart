@@ -3,6 +3,7 @@ import { MdDelete } from "react-icons/md";
 import { useDispatch } from 'react-redux';
 import { remove } from '../redux/slice/CartSlice';
 import toast from 'react-hot-toast';
+import { motion } from 'framer-motion';
 
 export const CartItem = ({item}) => {
 
@@ -16,9 +17,13 @@ export const CartItem = ({item}) => {
   return (
     <div className='md:w-[60%] sm:w-[75%] w-full border-b-2 pb-20 border-gray-700'>
         <div className='w-full flex flex-col justify-evenly gap-5 items-center'>
-            <div className='w-[150px]'>
+            <motion.div
+            initial={{ opacity: 0, x: '-10%', y: '-20%' }}
+            animate={{ opacity: 1, x: 0, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeInOut' }}
+            className='w-[150px]'>
                 <img src={item.image} alt='' loading='lazy'/>
-            </div>
+            </motion.div>
             <div className='lg:w-[60%] md:w-[70%] flex flex-col gap-2 justify-center '>
                 <p className='text-xl tracking-wide font-medium text-gray-700'>{item.title}</p>
                 <p className='text-sm text-gray-400 tracking-wider '>{item.description}</p>

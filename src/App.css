@@ -1,1 +1,5 @@
 /* write your css here */
+.productCard:hover .arrow{
+    font-size:32px;
+    transition: transform 3s ease-in;
+}
